@@ -1,0 +1,11 @@
+const express = require("express");
+const authController = require("../controllers/auth");
+const router = express.Router();
+router.post("/login", authController.postLogin);
+router.post("/createMod", authController.postCreateMod);
+router.post("/changePass", authController.postChangePass);
+router.post("/editMod", authController.editMod);
+router.get("/getUsers", authController.getUsers);
+router.get("/deleteUser", authController.deleteUser);
+router.get("/getUser", authController.getUser);
+module.exports = router;
